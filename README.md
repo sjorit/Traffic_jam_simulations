@@ -1,43 +1,52 @@
 # MATLAB Fall 2015 – Research Plan
 
-> * Traffic_jam_simulations
+> * Group Name: Traffic_jam_simulations
 > * Group participants names: Jorit Schmelzle, Shin Watanabe
 > * Project Title: Nagel–Schreckenberg model
 
 ## General Introduction
 
-(States your motivation clearly: why is it important / interesting to solve this problem?)
-(Add real-world examples, if any)
-(Put the problem into a historical context, from what does it originate? Are there already some proposed solutions?)
+Traffic jams are annoying situations everyone knows. However it is not always obvious how they arise. To better understand the factors playing a role and to understand, what has to be done in order to avoid more and bigger traffic jams is therefore a interesting and demanding question.
+Especially the so called "start-stop waves" are of a bigger interest for us, and the factors influencing them.
 
 ## The Model
 
-(Define dependent and independent variables you want to study. Say how you want to measure them.) (Why is your model a good abtraction of the problem you want to study?) (Are you capturing all the relevant aspects of the problem?)
+We will start from the Nagel-Schreckenberg model, which is a cellular automaton model for road traffic flow. 
+It shows nicely how traffic jams can arise due too crowded highways.
+We will then examine influence of the considered factors: 
+> * velocity of the cars 
+> * distance to other cars
+> * randomized behavior (eg. dawdling)
+
+Finally we will expand the model and examine the influence of the average speed of the traffic partipicants.
+
+Simplyfied highway traffic works after only few rules: A driver decides how fast to go, influenced by the speed limit, distance to cars in front of him, and some random dawdling (acceleration and driving speed may depend on the drivers mood or sleepiness). Therefore a cellular automaton model fits this problem especially well.
+
+We will however not consider motorway exits etc.
 
 
 ## Fundamental Questions
 
-(At the end of the project you want to find the answer to these questions)
-(Formulate a few, clear questions. Articulate them in sub-questions, from the more general to the more specific. )
+> * How does average driven speed and max allowed speed influence the arising of traffic jams?
+> * How should drivers bahave (accelerate, hold distance, etc) to reduce the likelihood of a traffic jam?
+
 
 
 ## Expected Results
 
-(What are the answers to the above questions that you expect to find before starting your research?)
+It is expected, that higher driving speeds and broader driving speed distributions increases the likelihood of traffic jams.
+Furthermore nervous drivers, changing their speed a lot, should also result in more traffic jams.
 
 
 ## References 
 
-(Add the bibliographic references you intend to use)
-(Explain possible extension to the above models)
-(Code / Projects Reports of the previous year)
+1) http://www.pd.infn.it/~agarfa/didattica/met_comp/lab_20140108/1992_origca.pdf
 
 
 ## Research Methods
 
-(Cellular Automata, Agent-Based Model, Continuous Modeling...) (If you are not sure here: 1. Consult your colleagues, 2. ask the teachers, 3. remember that you can change it afterwards)
+Cellular Automata
 
 
 ## Other
 
-(mention datasets you are going to use)
