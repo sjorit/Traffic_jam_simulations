@@ -1,9 +1,8 @@
-# MATLAB Fall 2014 – Research Plan (Template)
-(text between brackets to be removed)
+# MATLAB Fall 2015 – Research Plan
 
-> * Group Name: (be creative!)
-> * Group participants names: (alphabetically sorted by last name)
-> * Project Title: (can be changed later)
+> * Traffic_jam_simulations
+> * Group participants names: Jorit Schmelzle, Shin Watanabe
+> * Project Title: Nagel–Schreckenberg model
 
 ## General Introduction
 
