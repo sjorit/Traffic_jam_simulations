@@ -21,14 +21,16 @@ function res = update_v(road, v_unit, p_toddle_slow, p_toddle_fast, v_max, v_min
                     res(i) = (d_to_front - res(i)*safety_distance_time/v_unit)*(v_unit); %todo - eventuell muss hier v_unit-1
                 else
                     res(i) = 1;
-                end            
+                end
+            end
             
-            elseif res(i) >= (d_to_front)*v_unit %if velocity is higher than the distance to front car 
+            if res(i) >= (d_to_front - res(i)*safety_distance_time/v_unit)*v_unit && res(i) > 10 %if velocity is higher than the distance to front car 
                                            %-> v = st. behind front car
-                                           %(freedom of collision) 
-                if (d_to_front) > 0 %remember: 1 is the label, that shows us, that a cell is still occupied 
+                                           %(freedom of collision) AND
+                                           %isn't in a jam yet
+                if (d_to_front - res(i)*safety_distance_time/v_unit) > 0 %remember: 1 is the label, that shows us, that a cell is still occupied 
                                   %(we don't want cars to dissappear)
-                    res(i) = (d_to_front)*v_unit; %todo - eventuell muss hier v_unit-1
+                    res(i) = (d_to_front - res(i)*safety_distance_time/v_unit)*(v_unit); %todo - eventuell muss hier v_unit-1
                 else
                     res(i) = 1;
                 end
