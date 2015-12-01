@@ -1,6 +1,5 @@
-function res = update_v(road, v_unit, p_toddle_slow, p_toddle_fast, v_max, v_min, v_slow_fast_differenciation)
+function res = update_v(road, v_unit, p_toddle_slow, p_toddle_fast, v_max, v_min, v_slow_fast_differenciation, safety_distance_time, dec_fac)
     res = road;
-    safety_distance_time = 2;%todo in user input
     for i = 1:length(res)
         acc_fac = 1;
         %increase speed if possible by 1 (1 means here 1*v_unit)
@@ -50,7 +49,6 @@ function res = update_v(road, v_unit, p_toddle_slow, p_toddle_fast, v_max, v_min
   
         %toddle with probability p_toddle_slow/fast, depending on if the
         %driver is slow or fast defined in the usre input
-        dec_fac = 27; %todo
         if (res(i) <= v_slow_fast_differenciation)
             if (rand() < p_toddle_slow) && (res(i) > 0)
                 res(i) = res(i) - dec_fac*v_unit; 

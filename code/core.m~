@@ -30,15 +30,7 @@ function core()
     
     
     density_of_cars = sum(road > 0) / road_length
-    % @shin -> we got the flow per road configuration now in the
-    % flow_delta_m
-    % in flow_rate, you have the abs flow in moved cars per timestep
-    flow_rate = zeros(1,length(flow_delta_m(:,1)));
-    for j = 1:length(flow_rate)
-        flow_rate(j) = sum(flow_delta_m(j,:));
-    end
-    flow_rate = flow_rate';
-    
+    flow_delta_m(end, :)
     
     
 end
