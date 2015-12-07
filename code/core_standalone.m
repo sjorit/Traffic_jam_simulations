@@ -1,5 +1,4 @@
-function [res_tot, road, density_of_cars] = core(p_toddle_slow)
-    
+    clear;
     user_input;
     road = create_road(road_length, p_occupation, initial_obstacle);
     road = assign_v(road, v_min, v_max);
@@ -9,8 +8,8 @@ function [res_tot, road, density_of_cars] = core(p_toddle_slow)
     
     hold on
     for j = 1:(0.05*number_iterations)
-        %r_plot_data = prepare_road_for_plot(road);
-        %plot((0:length(road)-1), r_plot_data*j, '. r')%',MarkerFaceColor', 'r', 'MarkerEdgeColor', 'w')
+        r_plot_data = prepare_road_for_plot(road);
+        plot((0:length(road)-1), r_plot_data*j, '. r')%',MarkerFaceColor', 'r', 'MarkerEdgeColor', 'w')
         1;
     end
     
@@ -23,8 +22,8 @@ function [res_tot, road, density_of_cars] = core(p_toddle_slow)
                                 %and no change if a car arrives with same
                                 %velocity in a cell where one left
         flow_matrix_v = cat(1,flow_matrix_v, road); %oldest configuration on top
-        %r_plot_data = prepare_road_for_plot(road);
-        %plot((0:length(road)-1), r_plot_data*i, '. r')%',MarkerFaceColor', 'r', 'MarkerEdgeColor', 'w')
+        r_plot_data = prepare_road_for_plot(road);
+        plot((0:length(road)-1), r_plot_data*i, '. r')%',MarkerFaceColor', 'r', 'MarkerEdgeColor', 'w')
         %y=0 voll weil alle die möglichen ohne autos auf x achse geplottet
         %werden
     end
@@ -40,6 +39,3 @@ function [res_tot, road, density_of_cars] = core(p_toddle_slow)
     end
     flow_rate = flow_rate';
     res_tot = flow_rate;
-    
-    
-end

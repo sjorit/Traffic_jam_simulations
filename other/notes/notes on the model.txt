@@ -9,3 +9,5 @@
 - combine most realistic properties of different approaches
 
 - velocity distribution = gaussian?
+
+- safety distance time <-> soft braking!
