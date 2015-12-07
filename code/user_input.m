@@ -3,7 +3,7 @@
 rng(5);
 p_occupation = 0.3;
 initial_obstacle = false;
-p_toddle_slow = 0.3;
+%p_toddle_slow = 0.3;
 p_toddle_fast = p_toddle_slow * 1;
 road_length = 700;
 v_max = 80; %maximum allowed velocity of a car
