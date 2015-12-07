@@ -1,4 +1,4 @@
-function [res_tot, road, density_of_cars] = core(v_max)
+function [res_tot, road, density_of_cars] = core(p_occupation)
     
     user_input;
     road = create_road(road_length, p_occupation, initial_obstacle);
