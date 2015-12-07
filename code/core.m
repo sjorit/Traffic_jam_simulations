@@ -1,5 +1,5 @@
-function core()
-
+function [res_tot, road, density_of_cars] = core(v_max)
+    
     user_input;
     road = create_road(road_length, p_occupation, initial_obstacle);
     road = assign_v(road, v_min, v_max);
@@ -9,8 +9,9 @@ function core()
     
     hold on
     for j = 1:(0.05*number_iterations)
-        r_plot_data = prepare_road_for_plot(road);
-        plot((0:length(road)-1), r_plot_data*j, '. r')%',MarkerFaceColor', 'r', 'MarkerEdgeColor', 'w')
+        %r_plot_data = prepare_road_for_plot(road);
+        %plot((0:length(road)-1), r_plot_data*j, '. r')%',MarkerFaceColor', 'r', 'MarkerEdgeColor', 'w')
+        1;
     end
     
     ylim([1, number_iterations])
@@ -22,14 +23,14 @@ function core()
                                 %and no change if a car arrives with same
                                 %velocity in a cell where one left
         flow_matrix_v = cat(1,flow_matrix_v, road); %oldest configuration on top
-        r_plot_data = prepare_road_for_plot(road);
-        plot((0:length(road)-1), r_plot_data*i, '. r')%',MarkerFaceColor', 'r', 'MarkerEdgeColor', 'w')
+        %r_plot_data = prepare_road_for_plot(road);
+        %plot((0:length(road)-1), r_plot_data*i, '. r')%',MarkerFaceColor', 'r', 'MarkerEdgeColor', 'w')
         %y=0 voll weil alle die möglichen ohne autos auf x achse geplottet
         %werden
     end
     
     
-    density_of_cars = sum(road > 0) / road_length
+    density_of_cars = sum(road > 0) / road_length;
     % @shin -> we got the flow per road configuration now in the
     % flow_delta_m
     % in flow_rate, you have the abs flow in moved cars per timestep
@@ -38,7 +39,7 @@ function core()
         flow_rate(j) = sum(flow_delta_m(j,:));
     end
     flow_rate = flow_rate';
-    
+    res_tot = flow_rate;
     
     
 end

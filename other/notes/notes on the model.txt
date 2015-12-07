@@ -4,4 +4,8 @@
 
 - change start stop waves from moving forward to moving backwards by changeing the deceleration paramter from >1 to 1.
 
+- instead of anticipatory -> consider own velocity (makes more sense)
 
+- combine most realistic properties of different approaches
+
+- velocity distribution = gaussian?
