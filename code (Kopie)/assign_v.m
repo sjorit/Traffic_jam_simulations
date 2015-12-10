@@ -7,7 +7,7 @@ function res = assign_v(road, v_min, v_max)
                                     %mean at 30m/s and std of 10 m/s
     for i = 1:length(road)
         if res(i) ==  1
-            res(i) = v_max;%v_min + r_n(i);
+            res(i) = v_min + r_n(i);
         end
     end
 end

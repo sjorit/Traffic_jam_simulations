@@ -39,6 +39,3 @@
     end
     flow_rate = flow_rate';
     res_tot = flow_rate;
-    ylabel('time','FontSize',20)
-    xlabel('road configuration','FontSize',20)
-

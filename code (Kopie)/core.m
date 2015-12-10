@@ -1,4 +1,4 @@
-function [res_tot, road, density_of_cars] = core(number_iterations, v_max)
+function [res_tot, road, density_of_cars] = core(number_iterations)
     
     user_input;
     end_road_flow_count = 0;
